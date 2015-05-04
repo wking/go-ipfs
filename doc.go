@@ -2,7 +2,16 @@
 IPFS is a global, versioned, peer-to-peer filesystem
 
 There are sub-packages within the ipfs package for various low-level
-utilities, which are in turn assembled into:
+utilities like:
+
+routing/...:
+  Routing system interface and implementations.  For example, the IPFS
+  distributed hash table (DHT) lives here.
+exchange/...:
+  Exchange system interface and implementations.  For example, Bitswap
+  lives here.
+
+The low-level utilities are in turn assembled into IPFS APIs:
 
 core/...:
   The low-level API that gives consumers all the knobs they need,
